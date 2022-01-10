@@ -27,6 +27,7 @@ collection.forEach(createBookelement);
 
 // function to add a new book to the collection, with title and author.
 const addBook = (title, author) => {
+
   collection.push({
     title,
     author,
@@ -41,10 +42,15 @@ form.addEventListener('submit', (e) => {
     titleInput.value,
     authorInput.value,
   );
-  createBookelement(newBook);
-  titleInput.value = '';
-  authorInput.value = '';
-});
+  if(!titleInput.value){
+    return;
+  }else{
+    createBookelement(newBook);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+  }
+ );
 
 // function that deletes a book
 
