@@ -4,7 +4,7 @@ const authorInput = document.querySelector('#author');
 const booksContainer = document.querySelector('.books-container');
 
 // collection that keeps a list of books
-const collection = JSON.parse(localStorage.getItem('bookList')) && [
+const collection = JSON.parse(localStorage.getItem('bookList')) || [
   {
     title: 'The Lions Den',
     author: 'Dennis',
@@ -26,6 +26,7 @@ const createBookelement = ({ title, author }) => {
 
 // function to add a new book to the collection, with title and author.
 const addBook = (title, author) => {
+
   collection.push({
     title,
     author,
@@ -42,10 +43,15 @@ form.addEventListener('submit', (e) => {
     titleInput.value,
     authorInput.value,
   );
-  createBookelement(newBook);
-  titleInput.value = '';
-  authorInput.value = '';
-});
+  if(!titleInput.value){
+    return;
+  }else{
+    createBookelement(newBook);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+  }
+ );
 
 // function that deletes a book
 
