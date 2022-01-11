@@ -16,6 +16,7 @@ class Book {
 
 // The dummy data class
 class DummyData {
+
     static displayData() {
         const collections = [{
                 title: 'The living and dead',
@@ -32,12 +33,25 @@ class DummyData {
 
     static addBook(book) {
         const bookList = document.createElement('tr');
+        bookList.classList.add('table-row')
         bookList.innerHTML = `
     <td>"${book.title}" by <span>${book.author}</span></td>
     <td><button class="delete">Remove</button></td>
     `;
         table.appendChild(bookList);
     }
+
+    // static delete(e) {
+    //   const targetTitle = e.target.parentElement.firstChild.textContent;
+    //     const targetAuthor = e.target.previousElementSibling.textContent;
+    //     const targetEl = e.target.parentElement;
+    //     collections = collections.filter(
+    //       (book) => book.title !== targetTitle || book.author !== targetAuthor,
+    //     );
+    //     localStorage.setItem('bookList', JSON.stringify(collection));
+
+    //     targetEl.remove();
+    // }
 
     // clear input function
     static clearInput() {
@@ -71,8 +85,8 @@ form.addEventListener('submit', (e) => {
 });
 
 // Event: Remove a book
-// const tr = document.querySelector('tr');
-// console.log(tr);
+const tr = document.querySelector('table-row');
+console.log(tr);
 
 
 // collection that keeps a list of books
