@@ -17,15 +17,14 @@ class Book {
 // The dummy data class
 class DummyData {
   static displayData() {
-    const collections = [
-      {
-        title: 'The living and dead',
-        author: 'John doe',
-      },
-      {
-        title: 'Power of the Tongue',
-        author: 'Jane doe',
-      },
+    const collections = [{
+      title: 'The living and dead',
+      author: 'John doe',
+    },
+    {
+      title: 'Power of the Tongue',
+      author: 'Jane doe',
+    },
     ];
     // loop through the book collection and pass it to the addbook funtion
     collections.forEach((book) => DummyData.addBook(book));
@@ -33,9 +32,9 @@ class DummyData {
 
   static addBook(book) {
     const bookList = document.createElement('tr');
-    bookList.className('table-row');
+    bookList.classList.add('table-row');
     bookList.innerHTML = `
-    <td>${book.title} by <span>${book.author}</span></td>
+    <td>"${book.title}" by <span>${book.author}</span></td>
     <td><button class="delete">Remove</button></td>
     `;
     table.appendChild(bookList);

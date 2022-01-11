@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <title>BookList Application</title>
-  </head>
+</head>
 
-  <body>
-    <h1>Awesome Books</h1>
+<body>
+    <h1>All awesome books</h1>
     <table class="table">
-      <!-- <tr class="table-row">
+        <!-- <tr class="table-row">
         <td>Title <span>Author</span></td>
         <td><button class="delete">Remove</button></td>
       </tr> -->
-    </table>      
-      <!-- <div class="bookList">
+    </table>
+    <!-- <div class="bookList">
       <h3></h3>
       <p></p>
       <button type="submit">Delete</button><br>
       <hr>
       </div> -->
-
+    <hr class="hrline">
     <form id="form">
-      <input type="text" name="title" id="title" placeholder="Title" /><br /><br />
-      <input type="text" name="author" id="author" placeholder="Author" /><br /><br />
-      <button type="submit" id="btn">Add Book</button>
+        <h2>Add new book</h2>
+        <input type="text" name="title" id="title" placeholder="Title" required/><br /><br />
+        <input type="text" name="author" id="author" placeholder="Author" required/><br /><br />
+        <div class="flexend">
+            <button type="submit" class="submitbook" id="btn">Add</button>
+        </div>
     </form>
 
     <script src="./index.js"></script>
-  </body>
+</body>
+
 </html>
