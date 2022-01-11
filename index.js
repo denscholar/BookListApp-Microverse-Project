@@ -8,43 +8,42 @@ const table = document.querySelector('.table');
 
 // The collection class
 class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+    }
 }
 
 // The dummy data class
 class DummyData {
-  static displayData() {
-    const collections = [
-      {
-        title: 'The living and dead',
-        author: 'John doe',
-      },
-      {
-        title: 'Power of the Tongue',
-        author: 'Jane doe',
-      },
-    ];
-    // loop through the book collection and pass it to the addbook funtion
-    collections.forEach((book) => DummyData.addBook(book));
-  }
+    static displayData() {
+        const collections = [{
+                title: 'The living and dead',
+                author: 'John doe',
+            },
+            {
+                title: 'Power of the Tongue',
+                author: 'Jane doe',
+            },
+        ];
+        // loop through the book collection and pass it to the addbook funtion
+        collections.forEach((book) => DummyData.addBook(book));
+    }
 
-  static addBook(book) {
-    const bookList = document.createElement('tr');
-    bookList.innerHTML = `
-    <td>${book.title} by <span>${book.author}</span></td>
+    static addBook(book) {
+        const bookList = document.createElement('tr');
+        bookList.innerHTML = `
+    <td>"${book.title}" by <span>${book.author}</span></td>
     <td><button class="delete">Remove</button></td>
     `;
-    table.appendChild(bookList);
-  }
+        table.appendChild(bookList);
+    }
 
-  // clear input function
-  static clearInput() {
-    titleInput.value = '';
-    authorInput.value = '';
-  }
+    // clear input function
+    static clearInput() {
+        titleInput.value = '';
+        authorInput.value = '';
+    }
 }
 
 // The storage class
@@ -54,21 +53,21 @@ document.addEventListener('DOMContentLoaded', DummyData.displayData);
 
 // Event: Add a book
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  // get the form values
-  const title = titleInput.value;
-  const author = authorInput.value;
+    e.preventDefault();
+    // get the form values
+    const title = titleInput.value;
+    const author = authorInput.value;
 
-  // instatiate the book
-  const book = new Book(title, author);
-  // Add the book to the collection
+    // instatiate the book
+    const book = new Book(title, author);
+    // Add the book to the collection
 
-  DummyData.addBook(book);
-  // titleInput.value = '';
-  // authorInput.value = '';
+    DummyData.addBook(book);
+    // titleInput.value = '';
+    // authorInput.value = '';
 
-  // clear the input after submit
-  DummyData.clearInput();
+    // clear the input after submit
+    DummyData.clearInput();
 });
 
 // Event: Remove a book
