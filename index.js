@@ -33,7 +33,6 @@ class DummyData {
 
   static addBook(book) {
     const bookList = document.createElement('tr');
-    bookList.className.add('table-row');
     bookList.innerHTML = `
     <td>${book.title} by <span>${book.author}</span></td>
     <td><button class="delete">Remove</button></td>
@@ -73,8 +72,9 @@ form.addEventListener('submit', (e) => {
 });
 
 // Event: Remove a book
-// const tr = document.querySelector('table-row');
-//     console.log(tr);
+// const tr = document.querySelector('tr');
+// console.log(tr);
+
 
 // collection that keeps a list of books
 // let collection = JSON.parse(localStorage.getItem('bookList')) || [];
