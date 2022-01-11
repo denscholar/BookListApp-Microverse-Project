@@ -75,7 +75,6 @@ form.addEventListener('submit', (e) => {
 // const tr = document.querySelector('tr');
 // console.log(tr);
 
-
 // collection that keeps a list of books
 // let collection = JSON.parse(localStorage.getItem('bookList')) || [];
 
