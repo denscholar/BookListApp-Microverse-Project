@@ -33,7 +33,7 @@ class DummyData {
 
   static addBook(book) {
     const bookList = document.createElement('tr');
-    bookList.classList.add('table-row')
+    bookList.className('table-row');
     bookList.innerHTML = `
     <td>${book.title} by <span>${book.author}</span></td>
     <td><button class="delete">Remove</button></td>
