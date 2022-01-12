@@ -30,6 +30,9 @@ Download the ZIP from this location, or run the following git command to clone t
 #### 👤 Author2
 - GitHub: [@sumairq](https://github.com/sumairq)
 
+#### 👤 Author3
+- GitHub: [@vanillainanutshell](https://github.com/vanillainanutshell)
+
 ## Contributing 
 Contributions, issues, and feature requests are welcome!
 
