@@ -7,6 +7,7 @@ const bookContainer = document.querySelector('.book-container');
 const listLink = document.querySelector('.list');
 const addNew = document.querySelector('.add-new');
 const contact = document.querySelector('.contact-link');
+const contactPage = document.querySelector('.contact');
 const table = document.querySelector('.table');
 const time = document.querySelector('.time');
 
@@ -102,15 +103,21 @@ bookContainer.addEventListener('click', (e) => {
 
 // this section handles the page navigation
 listLink.addEventListener('click', () => {
-
+table.classList.remove('toggle');
+form.classList.add('toggle');
+contactPage.classList.add('toggle');
 });
 
 addNew.addEventListener('click', () => {
-
+form.classList.remove('toggle');
+table.classList.add('toggle');
+contactPage.classList.add('toggle');
 });
 
 contact.addEventListener('click', () => {
-
+contactPage.classList.remove('toggle');
+form.classList.add('toggle');
+table.classList.add('toggle');
 });
 
 // time time function
