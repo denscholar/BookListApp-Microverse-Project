@@ -34,11 +34,6 @@ class Storage {
 
   static removeFromStorage(id) {
     const bookList = Storage.getBookFromStorage();
-    // bookList.forEach((book, index) => {
-    //   if (book.id === id) {
-    //     bookList.splice(index, 1);
-    //   }
-    // });
     // eslint-disable-next-line eqeqeq
     const filteredBooks = bookList.filter((book) => book.id != id);
     localStorage.setItem('bookList', JSON.stringify(filteredBooks));
@@ -57,7 +52,8 @@ class DummyData {
     bookList.classList.add('table-row');
     bookList.innerHTML = `
     <td>"${book.title}" by <span>${book.author}</span></td>
-    <td><button class="delete" data-id=${book.id}>Remove</button></td>
+    <input class="hidden" type="hidden" value="${book.id}">
+    <td><button class="delete">Remove</button></td>
     `;
     bookContainer.appendChild(bookList);
   }
@@ -96,5 +92,5 @@ form.addEventListener('submit', (e) => {
 // REMOVE A BOOK EVENTs
 bookContainer.addEventListener('click', (e) => {
   DummyData.removeBook(e.target);
-  Storage.removeFromStorage(e.path[0].attributes[1].value);
+  Storage.removeFromStorage(e.target.parentElement.previousElementSibling.value);
 });
