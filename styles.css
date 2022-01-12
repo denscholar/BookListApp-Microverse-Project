@@ -54,7 +54,6 @@ tr:nth-child(odd) {
 
 form {
   width: 30%;
-  display: none;
 }
 
 .flexend {
@@ -119,10 +118,14 @@ li {
     cursor: pointer;
 }
 
-p {
+/* p {
 
-}
+} */
 
-.contact{
+/* .contact{
+    display: none;
+} */
+
+.toggle{
     display: none;
 }
