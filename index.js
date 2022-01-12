@@ -8,8 +8,9 @@ const listLink = document.querySelector('.list');
 const addNew = document.querySelector('.add-new');
 const contact = document.querySelector('.contact-link');
 const contactPage = document.querySelector('.contact');
-const table = document.querySelector('.table');
+const table = document.querySelector('.table-head');
 const time = document.querySelector('.time');
+const title = document.querySelector('.title');
 
 // The Book class
 class Book {
@@ -103,6 +104,7 @@ bookContainer.addEventListener('click', (e) => {
 
 // this section handles the page navigation
 listLink.addEventListener('click', () => {
+  title.classList.remove('toggle');
   table.classList.remove('toggle');
   form.classList.add('toggle');
   contactPage.classList.add('toggle');
@@ -111,6 +113,7 @@ listLink.addEventListener('click', () => {
 addNew.addEventListener('click', () => {
   form.classList.remove('toggle');
   table.classList.add('toggle');
+  title.classList.add('toggle');
   contactPage.classList.add('toggle');
 });
 
