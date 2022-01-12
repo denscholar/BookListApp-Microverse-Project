@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -12,16 +19,20 @@ body {
 
 h1 {
   font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 2rem;
+  text-align: center;
+  margin: 1em;
 }
 
 table {
   border: 5px black solid;
   border-radius: 5px;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -38,6 +49,13 @@ tr {
   border: 2px solid black;
 }
 
+.verticalline {
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  border-left: 3px black solid;
+  height: 2rem;
+}
+
 td {
   font-size: 1.5rem;
 }
@@ -47,7 +65,7 @@ tr:nth-child(odd) {
 }
 
 form {
-  width: 30%;
+  width: 35%;
 }
 
 .flexend {
@@ -61,8 +79,9 @@ form {
 input {
   border: 3px black solid;
   border-radius: 5px;
-  height: 1.7rem;
+  height: 3rem;
   width: 100%;
+  padding: 10px;
 }
 
 input::placeholder {
@@ -84,4 +103,85 @@ button {
 
 .submitbook {
   margin: 0;
+  padding: 5px;
+  width: 3em;
+}
+
+.bav-bar {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 1rem;
+  width: 98vw;
+  border: 3px solid black;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+.nav-link ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.nav-list:hover {
+  color: blue;
+}
+
+li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  font-size: 1.3rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact > h1 {
+  margin: 1rem auto 2rem auto;
+}
+
+footer > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.contact > p {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.contact > ul > li {
+  font-size: 1.2rem;
+  list-style-type: disc;
+}
+
+footer {
+  height: 2.5rem;
+  width: 98%;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 7rem;
+}
+
+.toggle {
+  display: none;
+}
+
+.table-head {
+  width: 60%;
+  margin-top: 2em;
 }

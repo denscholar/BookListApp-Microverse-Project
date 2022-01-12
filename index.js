@@ -4,6 +4,13 @@ const form = document.querySelector('#form');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const bookContainer = document.querySelector('.book-container');
+const listLink = document.querySelector('.list');
+const addNew = document.querySelector('.add-new');
+const contact = document.querySelector('.contact-link');
+const contactPage = document.querySelector('.contact');
+const table = document.querySelector('.table-head');
+const time = document.querySelector('.time');
+const title = document.querySelector('.title');
 
 // The Book class
 class Book {
@@ -94,3 +101,44 @@ bookContainer.addEventListener('click', (e) => {
   DummyData.removeBook(e.target);
   Storage.removeFromStorage(e.target.parentElement.previousElementSibling.value);
 });
+
+// this section handles the page navigation
+listLink.addEventListener('click', () => {
+  title.classList.remove('toggle');
+  table.classList.remove('toggle');
+  form.classList.add('toggle');
+  contactPage.classList.add('toggle');
+});
+
+addNew.addEventListener('click', () => {
+  form.classList.remove('toggle');
+  table.classList.add('toggle');
+  title.classList.add('toggle');
+  contactPage.classList.add('toggle');
+});
+
+contact.addEventListener('click', () => {
+  contactPage.classList.remove('toggle');
+  form.classList.add('toggle');
+  table.classList.add('toggle');
+});
+
+// time time function
+const currentTime = (date) => {
+  // for the date
+  const currentDayAndMonth = date.toDateString().slice(3, 15);
+  // for the time
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  const amPm = hours >= 12 ? 'pm' : 'am';
+  hours %= 12;
+  hours = hours || 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+  seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+  const currentDate = `${currentDayAndMonth} ${hours}:${minutes}:${seconds} ${amPm}`;
+  return currentDate;
+};
+
+time.textContent = currentTime(new Date());
