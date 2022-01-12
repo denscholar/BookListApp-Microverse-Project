@@ -103,21 +103,21 @@ bookContainer.addEventListener('click', (e) => {
 
 // this section handles the page navigation
 listLink.addEventListener('click', () => {
-table.classList.remove('toggle');
-form.classList.add('toggle');
-contactPage.classList.add('toggle');
+  table.classList.remove('toggle');
+  form.classList.add('toggle');
+  contactPage.classList.add('toggle');
 });
 
 addNew.addEventListener('click', () => {
-form.classList.remove('toggle');
-table.classList.add('toggle');
-contactPage.classList.add('toggle');
+  form.classList.remove('toggle');
+  table.classList.add('toggle');
+  contactPage.classList.add('toggle');
 });
 
 contact.addEventListener('click', () => {
-contactPage.classList.remove('toggle');
-form.classList.add('toggle');
-table.classList.add('toggle');
+  contactPage.classList.remove('toggle');
+  form.classList.add('toggle');
+  table.classList.add('toggle');
 });
 
 // time time function
