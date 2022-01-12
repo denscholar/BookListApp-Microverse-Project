@@ -4,6 +4,11 @@ const form = document.querySelector('#form');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const bookContainer = document.querySelector('.book-container');
+const listLink = document.querySelector('.list');
+const addNew = document.querySelector('.add-new');
+const contact = document.querySelector('.contact-link');
+const table = document.querySelector('.table');
+const time = document.querySelector('.time');
 
 // The Book class
 class Book {
@@ -94,3 +99,29 @@ bookContainer.addEventListener('click', (e) => {
   DummyData.removeBook(e.target);
   Storage.removeFromStorage(e.target.parentElement.previousElementSibling.value);
 });
+
+// this section handles the page navigation
+listLink.addEventListener('click', () => {
+
+});
+
+addNew.addEventListener('click', () => {
+
+});
+
+contact.addEventListener('click', () => {
+
+});
+
+// time
+
+const currentdate = new Date();
+const datetime = `Last Sync: ${currentdate.getDate()}/${
+  currentdate.getMonth() + 1}/${
+  currentdate.getFullYear()} @ ${
+  currentdate.getHours()}:${
+  currentdate.getMinutes()}:${
+  currentdate.getSeconds()}`;
+console.log(datetime);
+const x = currentdate.toDateString();
+console.log(x.slice(3, 15));
