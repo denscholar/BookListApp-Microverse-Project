@@ -61,7 +61,6 @@ tr:nth-child(odd) {
 
 form {
     width: 30%;
-    display: none;
 }
 
 .flexend {
@@ -136,7 +135,6 @@ li {
 }
 
 .contact {
-    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -168,4 +166,8 @@ footer>p {
     font-size: 1.5rem;
     font-weight: bold;
     padding-left: 1rem;
+}
+
+.toggle {
+  display: none;
 }
