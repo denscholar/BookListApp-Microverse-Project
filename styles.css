@@ -60,12 +60,8 @@ tr:nth-child(odd) {
 }
 
 form {
-<<<<<<< HEAD
-  width: 30%;
-=======
     width: 30%;
     display: none;
->>>>>>> 36f2ced0965194c92308f00f904b34a0cf54f154
 }
 
 .flexend {
@@ -132,19 +128,6 @@ li {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-/* p {
-
-} */
-
-/* .contact{
-    display: none;
-} */
-
-.toggle{
-    display: none;
-}
-=======
 .time {
     display: flex;
     justify-content: flex-end;
@@ -186,4 +169,3 @@ footer>p {
     font-weight: bold;
     padding-left: 1rem;
 }
->>>>>>> 36f2ced0965194c92308f00f904b34a0cf54f154
