@@ -55,6 +55,7 @@ class DummyData {
     bookList.classList.add('table-row');
     bookList.innerHTML = `
     <td>"${book.title}" by <span>${book.author}</span></td>
+    <input class="id" type="hidden" value="${book.id}">
     <td><button class="delete">Remove</button></td>
     `;
     bookContainer.appendChild(bookList);
@@ -94,4 +95,5 @@ form.addEventListener('submit', (e) => {
 // REMOVE A BOOK EVENTs
 bookContainer.addEventListener('click', (e) => {
   DummyData.removeBook(e.target);
+  Storage.removeFromStorage(e.target);
 });
