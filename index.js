@@ -113,15 +113,22 @@ contact.addEventListener('click', () => {
 
 });
 
-// time
+// time time function
+const currentTime = (date) => {
+  // for the date
+  const currentDayAndMonth = date.toDateString().slice(3, 15);
+  // for the time
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  const amPm = hours >= 12 ? 'pm' : 'am';
+  hours %= 12;
+  hours = hours || 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+  seconds = seconds < 10 ? `0${seconds}` : seconds;
 
-const currentdate = new Date();
-const datetime = `Last Sync: ${currentdate.getDate()}/${
-  currentdate.getMonth() + 1}/${
-  currentdate.getFullYear()} @ ${
-  currentdate.getHours()}:${
-  currentdate.getMinutes()}:${
-  currentdate.getSeconds()}`;
-console.log(datetime);
-const x = currentdate.toDateString();
-console.log(x.slice(3, 15));
+  const currentDate = `${currentDayAndMonth} ${hours}:${minutes}:${seconds} ${amPm}`;
+  return currentDate;
+};
+
+time.textContent = currentTime(new Date());
