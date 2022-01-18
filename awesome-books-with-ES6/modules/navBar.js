@@ -1,7 +1,6 @@
-// eslint-disable-next-line import/no-cycle
 import {
   listLink, title, table, form, contactPage, addNew, contact,
-} from '../index.js';
+} from './otherElement.js';
 
 // this section handles the page navigation
 export default function navBar() {

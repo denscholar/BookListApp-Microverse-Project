@@ -1,6 +1,5 @@
-/* eslint-disable import/no-cycle */
 /* eslint-disable no-undef */
-import { time } from '../index.js';
+import time from './time.js';
 
 const currentTime = () => {
   const localTime = luxon.DateTime.local();

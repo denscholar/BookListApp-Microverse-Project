@@ -1,9 +1,8 @@
-/* eslint-disable import/no-cycle */
 /* eslint-disable max-len */
 import Book from './Book.js';
 import Storage from './Storage.js';
 import DummyData from './DummyData.js';
-import { form, titleInput, authorInput } from '../index.js';
+import { form, titleInput, authorInput } from './otherElement.js';
 
 // ADD A BOOK EVENT
 const addBook = () => {

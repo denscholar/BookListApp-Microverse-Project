@@ -1,7 +1,6 @@
-/* eslint-disable import/no-cycle */
 import Storage from './Storage.js';
 import DummyData from './DummyData.js';
-import { bookContainer } from '../index.js';
+import bookContainer from './bookElement.js';
 
 // REMOVE A BOOK EVENTS
 

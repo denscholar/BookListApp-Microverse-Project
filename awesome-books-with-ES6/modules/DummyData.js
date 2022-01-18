@@ -1,9 +1,8 @@
-/* eslint-disable import/no-cycle */
 import Storage from './Storage.js';
-import { bookContainer } from '../index.js';
+import bookContainer from './bookElement.js';
 
 // The dummy data class
-export default class DummyData {
+class DummyData {
   static displayData = () => {
     const collections = Storage.getBookFromStorage();
     collections.forEach((book) => DummyData.addBook(book));
@@ -27,3 +26,5 @@ export default class DummyData {
     }
   };
 }
+
+export default DummyData;
