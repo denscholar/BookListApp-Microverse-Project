@@ -1,0 +1,9 @@
+export const form = document.querySelector('#form');
+export const listLink = document.querySelector('.list');
+export const addNew = document.querySelector('.add-new');
+export const contact = document.querySelector('.contact-link');
+export const contactPage = document.querySelector('.contact');
+export const table = document.querySelector('.table-head');
+export const title = document.querySelector('.title');
+export const titleInput = document.querySelector('#title');
+export const authorInput = document.querySelector('#author');
