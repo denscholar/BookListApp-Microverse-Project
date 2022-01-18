@@ -3,7 +3,7 @@ import {
 } from './otherElement.js';
 
 // this section handles the page navigation
-export default function navBar() {
+const navBar = () => {
   listLink.addEventListener('click', () => {
     title.classList.remove('toggle');
     table.classList.remove('toggle');
@@ -23,4 +23,6 @@ export default function navBar() {
     form.classList.add('toggle');
     table.classList.add('toggle');
   });
-}
+};
+
+export default navBar;
