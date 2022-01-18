@@ -8,7 +8,7 @@ import navBar from './modules/navBar.js';
 import DummyData from './modules/DummyData.js';
 import addBook from './modules/addBook.js';
 import deleteBook from './modules/delete.js';
-import currentTime from './currentTime.js';
+import currentTime from './modules/currentTime.js';
 
 export const form = document.querySelector('#form');
 export const titleInput = document.querySelector('#title');

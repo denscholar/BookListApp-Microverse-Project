@@ -186,7 +186,7 @@ footer {
   margin-top: 2em;
 }
 
-.book-container{
+.book-container {
   display: flex;
   flex-direction: column;
 }

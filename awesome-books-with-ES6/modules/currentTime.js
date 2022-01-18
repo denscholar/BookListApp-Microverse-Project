@@ -1,11 +1,11 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-undef */
-// time time function
-// export default function currentTime() {
-//   const localTime = luxon.DateTime.local();
+import { time } from '../index.js';
 
-//   // const x = `${localTime.toLocaleString(luxon.DateTime.DATE_FULL)}, ${localTime.toLocaleString(luxon.DateTime.TIME_WITH_SECONDS)}`;
-//   // console.log(x);
+const currentTime = () => {
+  const localTime = luxon.DateTime.local();
+  time.textContent = `${localTime.toLocaleString(luxon.DateTime.DATE_FULL)}, ${localTime.toLocaleString(luxon.DateTime.TIME_WITH_SECONDS)}`;
+  setTimeout(currentTime, 1000);
+};
 
-//   // setTimeout(startTime, 1000);
-// }
-
+export default currentTime;
