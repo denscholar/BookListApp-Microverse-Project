@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>BookList Application</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="bav-bar">
+        <div class="logo">
+          <h3>Awesome Books</h3>
+        </div>
+        <div class="nav-link">
+          <ul>
+            <li class="nav-list list">List</li>
+            <li class="verticalline"></li>
+            <li class="nav-list add-new">Add New</li>
+            <li class="verticalline"></li>
+            <li class="nav-list contact-link">Contact</li>
+          </ul>
+        </div>
+      </nav>
+      <p class="time"></p>
+    </header>
+    <div class="table-head">
+      <h1 class="title">All awesome books</h1>
+      <table class="table">
+        <tbody class="book-container"></tbody>
+      </table>
+    </div>
+    <form id="form" class="toggle">
+      <h2>Add new book</h2>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Title"
+      /><br /><br />
+      <input
+        type="text"
+        name="author"
+        id="author"
+        placeholder="Author"
+      /><br /><br />
+      <div class="flexend">
+        <button type="submit" class="submitbook" id="btn">Add</button>
+      </div>
+    </form>
+    <div class="contact toggle">
+      <h1>Contact Information</h1>
+      <p>
+        Do you have any question or you just want to say hello? <br />
+        You can reach out to us!
+      </p>
+      <ul class="contact-info">
+        <li>Our email: denscholar2020@gmail.com</li>
+        <li>Our phone number: +234814599598</li>
+        <li>Our address: 7, Sijuwola, close, Aladura, Lagos state, Nigeria</li>
+      </ul>
+    </div>
+    <footer>
+      <p>Copyright .</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
